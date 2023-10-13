@@ -1,5 +1,5 @@
 // Registro define um novo tipo de dado, no qual dentro dele podemos ter tanto os tipos basicos 
-// ou tambem vetores ou mesmo outros registros criados. Tambem podem ser argumento de funções
+// ou tambem vetores ou mesmo outros registros criados. Tambem podem ser tanto argumento ou retorno de funções
 
 // Tudo isso através de um unico identificador.
 // A declaraçao de um registro e feito através da palavra chave struct, seguida do nome registro (identificador) 
