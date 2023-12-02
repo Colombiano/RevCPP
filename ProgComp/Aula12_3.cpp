@@ -20,7 +20,7 @@ int main()
 	apartamento casa_patricia = { "Morada_Cabula",12,805,350000 };
 	exibir_dados_apartamento(casa_patricia);
 	apartamento predio_Garibaldi = receber_dados();
-  exibir_dados_apartamento(predio_Garibaldi);
+        exibir_dados_apartamento(predio_Garibaldi);
 }
 
 void exibir_dados_apartamento(apartamento X)
