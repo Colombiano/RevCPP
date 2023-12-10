@@ -32,5 +32,6 @@ int main()
 	std::strcpy(salvador[12].doentes.nome, "flamingo");
 	std::cout << salvador[0].doentes.nome << std::endl;
 	std::cout << salvador[12].doentes.nome << std::endl;
+	std::cout << salvador[12].doentes.nome[2] << std::endl; // Vai imprimir o caractere "a" de flamingo
 	std::cout << salvador[1].doentes.nome << std::endl;
 }
