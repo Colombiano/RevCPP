@@ -1,4 +1,4 @@
-// soma e subtração de números complexos utilizando o STD::CIN e STD::COUT e as funções internas OPERATOR+, OPERATOR- E OPERATOR<<
+// soma e subtração de números complexos utilizando o STD::CIN e STD::COUT e as funções internas OPERATOR+, OPERATOR- , OPERATOR<< e OPERATOR>>
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
@@ -14,16 +14,18 @@ struct complexo
 complexo operator+(complexo, complexo);
 complexo operator-(complexo, complexo);
 std::ostream& operator<<(std::ostream&,complexo&);
-complexo ler();
+std::istream& operator>>(std::istream&,complexo&);
 
 int main()
 
 {
 
 	std::cout << "Digite o primeiro numero complexo" << std::endl;
-	complexo c1 = ler();
+	complexo c1;
+	std::cin >> c1;
 	std::cout << "Digite o segundo numero complexo" << std::endl;
-	complexo c2 = ler();
+	complexo c2;
+	std::cin >> c2;
 	std::cout << c1;
 	std::cout << c2;
 	complexo c3 = c1 + c2;
@@ -70,13 +72,12 @@ std::ostream& operator<<(std::ostream& os,complexo &d)
 	return os;
 }
 
-complexo ler()
+std::istream& operator>>(std::istream& os, complexo &leitura)
 {
-	complexo leitura;
-	std::cin >> leitura.real;
-	std::cin >> leitura.imaginario;
-	std::cin.get();
-	return leitura;
+	os >> leitura.real;
+	os >> leitura.imaginario;
+	os.get();
+	return os;
 
 
 }
