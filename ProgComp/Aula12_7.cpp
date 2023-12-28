@@ -28,7 +28,7 @@ int main()
 	std::cout << "o valor da soma eh :";
 	exibir(c3);
 	std::cout << std::endl;
-	std::cout << "o valor da soma eh :";
+	std::cout << "o valor da subtracao eh :";
 	exibir(c4);
 	std::cout << std::endl;
 	
