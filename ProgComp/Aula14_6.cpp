@@ -1,4 +1,4 @@
-// Ponteiros de fixação 01
+// Ponteiros Exercicio de fixação 01
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
