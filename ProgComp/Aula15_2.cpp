@@ -56,7 +56,30 @@ int main()
 	// somando, por ser um vetor do tipo inteiro 4 bytes
 	// a vet2, fazendo com que ele passe a armazenar a
 	// próxima posição subsequente a vet2 = vet2[0]
-	// ou seja, vet2[1].
+	// ou seja, vet2[1]. 
+
+	// Com isso vemos uma curiosidade:
+	// A notação de colchete é apenas uma forma 
+	// de facilitar o uso do operador indireção.
+
+
+	int* pvet = new int;
+	pvet[0] = 74;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << *pvet;
+	delete pvet;
+	
+	// Ao fazer essa aritmética eu sempre devo
+	// voltar a posição original antes de fazer
+	// o "delete". Com isso vemos que os endereços
+	// armazenados nos ponteiros podem ser somados
+	// e subtraídos, dependendo do tipo ao qual
+	// ele aponta.
+	
+	// 1 int = 4 bytes; 1 short = 2 bytes; 1 char = 1 byte
+
+	
 
 	delete[] vet2;
 
