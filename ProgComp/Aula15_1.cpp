@@ -53,16 +53,19 @@ int main ()
 
 
 
-	int* ptr2 = GetNum('A'); // Não devemos fazer esse tipo de construção, porque tem que criar um delete
-	std::cout << ptr2;      // Em OO isso é automatizado,
-	delete ptr2;           // Por isso usamos o "delete" aqui.
+	int* ptr2 = GetNum('A'); // Não devemos fazer esse tipo de construção, 
+	std::cout << ptr2;      // porque ela tende a fazer com que esqueçamos o uso do delete
+	delete ptr2;           // Por isso usamos o "delete" aqui. Em OO isso é automatizado.
+	                      //  A dica é: A função onde aparece o new é a mesma onde deve ocorrer o delete
 }
 
 int* GetNum(char x)
 
 {
 
-	int* ptr1 = new int{ x };
+	int* ptr1 = new int{ x };  // inicializando o ponteiro, alocando memoria 
+	                          // e também atribuindo com o valor x,que é um inteiro,
+				 // o conteúdo do endereço de memória apontado 
 	return ptr1;
 
 
