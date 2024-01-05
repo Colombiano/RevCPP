@@ -1,0 +1,63 @@
+// Alocação dinâmica de memória  - Parte 02
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstring>
+
+int main()
+
+{
+
+	// tenho que ter cuidado para não realizar "delete" duplo  
+	// ou mesmo deletar um "new" que é compartilhado  
+	// entre funções. Não podemos usar o "delete"  
+	// para liberar memória criada por alocação automática. 
+	
+	// Não usamos alocação dinâmica para substituir a 
+	// alocação automática e sim para criar vetores 
+	// dinâmicos e vetores dinâmicos de registro. 
+	
+	
+	int * vet = new int [20]; // Aqui é a declaração de um vetor dinâmico
+	delete [] vet;
+	// eu guardo no ponteiro vet o endereço do 
+	// primeiro elemento do vetor.Esse ponteiro também 
+	// recebe o rotulo do vetor dinâmico.
+						  
+	std::cout << "Digite o tamanho do vetor: " << std::endl;
+	int tamanho;
+	std::cin >> tamanho;
+	int* vet1 = new int[tamanho]; // neste caso, definimos o tamanho do 
+	// durante a execução do programa. Contudo, 
+	// depois de criado o vetor não muda de tamanho.
+	
+	delete[] vet1;
+
+	int * vet2 = new int [5];
+
+	vet2[0] = 15;
+	vet2[1] = 5;
+	std::cout << *vet2; // O resulto será 15 
+	// Neste caso, como o ponteiro memoriza o endereço
+	// do primeiro vetor, usando o operador de indireção  
+	// eu posso pegar o valor armazenado no endereço.
+	
+
+	std::cout << std::endl;
+	std::cout << *(vet2 +1); // O resulto será 5  
+	// Eu posso usar essa notação de ponteiro, neste caso 
+	// Somando +1 à posição de *vet2, que no 
+	// caso é vet2[0], logo resultando em vet2[1]
+
+	std::cout << std::endl;
+	std::cout << vet2[1]; // O resulto será 5,
+	// provando que *(vet2 +1) = vet2[1]
+	// quando faço vet2 = vet2 + 1, eu estou na verdade 
+	// somando, por ser um vetor do tipo inteiro 4 bytes
+	// a vet2, fazendo com que ele passe a armazenar a
+	// próxima posição subsequente a vet2 = vet2[0]
+	// ou seja, vet2[1].
+
+	delete[] vet2;
+
+}
