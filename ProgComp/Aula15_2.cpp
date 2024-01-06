@@ -76,6 +76,7 @@ int main()
 
 	int pvet1[10];
 	*pvet1 = 12; // A mesma coisa de fazer pvet1[0] = 12;
+	std::cout << *(pvet1 + 0) << std::endl; // a mesma coisa que std::cout <<pvet1[0];
 	
 	// Ao fazer essa aritmética eu sempre devo
 	// voltar a posição original antes de fazer
