@@ -79,7 +79,8 @@ int main()
 	std::cout << std::endl;
 	*pvet1 = 12; // A mesma coisa de fazer pvet1[0] = 12;
 	*(pvet1 + 1) = 13; // a mesma que fazer pvet1[2] = 13;
-	std::cout << &pvet1;
+	std::cout << &pvet1; // provando que o nome de um vetor estático é um endereço 
+	 // no caso, a primeira posição do vetor estático.
 	std::cout << std::endl;
 	std::cout << *(pvet1 + 0) << std::endl; // a mesma coisa que std::cout <<pvet1[0];
 	
