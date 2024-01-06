@@ -69,6 +69,13 @@ int main()
 	std::cout << std::endl;
 	std::cout << *pvet;
 	delete pvet;
+
+	// Posso também fazer o mesmo no sentido
+	// contrário, usando a notação de ponteiro
+	// para um vetor estático.
+
+	int pvet1[10];
+	*pvet1 = 12; // A mesma coisa de fazer pvet1[0] = 12;
 	
 	// Ao fazer essa aritmética eu sempre devo
 	// voltar a posição original antes de fazer
