@@ -75,7 +75,12 @@ int main()
 	// para um vetor estático.
 
 	int pvet1[10];
+	std::cout << &pvet1;
+	std::cout << std::endl;
 	*pvet1 = 12; // A mesma coisa de fazer pvet1[0] = 12;
+	*(pvet1 + 1) = 13; // a mesma que fazer pvet1[2] = 13;
+	std::cout << &pvet1;
+	std::cout << std::endl;
 	std::cout << *(pvet1 + 0) << std::endl; // a mesma coisa que std::cout <<pvet1[0];
 	
 	// Ao fazer essa aritmética eu sempre devo
